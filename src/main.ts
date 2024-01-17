@@ -190,7 +190,7 @@ const map = new maplibregl.Map({
                 layout: { visibility: 'none' },
             },
             {
-                id: 'building', // 建物
+                id: 'building', // 建物レイヤー
                 source: 'gsi_vector',
                 'source-layer': 'building',
                 type: 'fill-extrusion',
@@ -307,6 +307,7 @@ map.on('load', () => {
         }),
         'top-right', // コントロールの位置を指定
     );
+
     // 3D切り替え
     const terrainComtrol = document.querySelector('.maplibregl-ctrl-terrain');
     terrainComtrol?.addEventListener('click', () => {
